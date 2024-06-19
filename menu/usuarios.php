@@ -1,32 +1,25 @@
 <?php
-$usuarios = [
-        ["usu" => "victorX", "nome" => "Victor de Lucca", "senha" => "111"],
-        ["usu" => "fer", "nome" => "Fernanda", "senha" => "222"],
-        ["usu" => "tulipa", "nome" => "Tineu", "senha" => "333"]
-    ];
+    include_once("configuracao.php");
 
     function verificarUser($userRecebido, $senhaRecebida){
 
-        global $usuarios;
+        global $strcon;
+
+        $sql = "SELECT * FROM usuarios WHERE user_login = '$userRecebido' AND senha = '$senhaRecebida'";
+        $resultado = mysqli_query($strcon,$sql) or die("Erro ao retornar dados");
+
+        while($row = mysqli_fetch_array($resultado)) {
+
+            if($row['nome'] != null){
+                $_SESSION["usuario"] = $row['user_login'];
+                $_SESSION["senha"] = $row['senha'];
+                $_SESSION["nome"] = $row['nome'];
+                $_SESSION["permissao"] = $row['nivel_permissao'];
         
-        for($i=0; $i < count($usuarios); $i++){
-
-            if($usuarios[$i]["usu"] == $userRecebido){
-                
-                if($usuarios[$i]["senha"] == $senhaRecebida){
-
-                    $_SESSION["usuario"] = $usuarios[$i]["usu"];
-                    $_SESSION["senha"] = $usuarios[$i]["senha"];
-
-                    return true;
-
-                }else{
-                    echo "Senha inválida";
-                }
+                return true;
             }
         }
 
         return false;
     }
-
 ?>

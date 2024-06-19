@@ -19,18 +19,21 @@
 
     $usuarioSessao = $_SESSION["usuario"] ?? null;
     $senha = $_SESSION["senha"] ?? null;
-    echo " Funcionou finalmente" . $usuarioSessao . $senha;
     
     if(!is_null($usuarioSessao)){
 
         echo" FUNCIONOU AEEEEE";
         $nome = $_SESSION["nome"] ?? null;
+        $permissao = $_SESSION["permissao"] ?? null;
         if(!is_null($nome)){
             echo "<h2>Bem Vindo ". ucfirst(strtolower($nome)) . " </h2>";
         }
+        if($permissao == 1){
+            require_once "admin.php";
+        } else {
+            require_once "membro.php";
+        }
     }else{
-        
-        echo " Não acertou a senha";
 
         $usuario = $_POST["usuario"] ?? null;
         $senha =  $_POST["senha"] ?? null;
@@ -42,9 +45,13 @@
 
             if(verificarUser($usuario, $senha)){
                 echo "Fazendo Login... Entrando na Conta :)";
+                header('Location: '.$_SERVER['REQUEST_URI']);
               
             }else{
+                echo "Senha inválida ";
+                    // fazer var dump
                 echo "Tentar Novamente";
+
                 require_once "formulario.php";
             }
             
