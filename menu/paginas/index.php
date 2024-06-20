@@ -22,7 +22,7 @@
     
     if(!is_null($usuarioSessao)){
 
-        echo" FUNCIONOU AEEEEE";
+      //  echo" FUNCIONOU AEEEEE";
         $nome = $_SESSION["nome"] ?? null;
         $permissao = $_SESSION["permissao"] ?? null;
         if(!is_null($nome)){
@@ -42,12 +42,12 @@
         $senha =  $_POST["senha"] ?? null;
 
         if(is_null($usuario) && is_null($senha)){
-            echo " Fazer Login";
+            //echo " Fazer Login";
             include_once "formulario.php";
         }else{
 
             if(verificarUser($usuario, $senha)){
-                echo "Fazendo Login... Entrando na Conta :)";
+              //  echo "Fazendo Login... Entrando na Conta :)";
                 header('Location: '.$_SERVER['REQUEST_URI']);
               
             }else{

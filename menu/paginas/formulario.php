@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
     <title>Formulário login e senha</title>
 </head>
+        <h1>CRAZY FROG AVALIATIONS</h1>
 <body>
         <div class = "login" >
             <h2>LOGIN</h2>

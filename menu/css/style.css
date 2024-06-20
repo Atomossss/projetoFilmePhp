@@ -1,11 +1,21 @@
 
 body{
     font-family: Arial, Arial, Helvetica, sans-serif;
-    background: rgb(87, 0, 0);
+    background-image: linear-gradient(to right, rgb(12, 145, 0) , rgb(0, 0, 0));
+
+}
+
+
+h1{
+    text-shadow: 1px 1px 5px rgb(238, 255, 0);   
+    font-size: 300% ;
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .login{
-    background-color: rgb(233, 135, 8);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,7 +33,7 @@ input{
 
 .botao{
     
-    background-color : rgba(49, 30, 216, 0.473);
+    background-color : rgba(121, 228, 0, 0.63);
     border: none;
     padding: 15px;
     width: 100%;
@@ -33,6 +43,6 @@ input{
 }   
 
 .botao:hover{
-    background-color: pink;
-    color: black;
+    background-color: rgb(0, 22, 1);
+    color: rgb(121, 121, 121);
 }

@@ -12,9 +12,8 @@
 
         <div>
             <a href="sair.php" >
-                <h1>
-                    SAIR
-                </h1>
+            <button type="button">Sair</button>
+            </a>
             </a>
         </div>
 
