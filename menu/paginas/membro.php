@@ -5,29 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="membro.css">
+    <link rel="stylesheet" href="css/membro.css">
+    
     <title>Página do Usuário</title>
 </head>
 <body>
+
     <h1> Avalie os filmes </h1>
 
     <?php 
     session_start();
     $_SESSION['nome'] = $nome_do_usuario;
 
-    echo "<h2> Bem vindo $nome_do_usuario fique a vontade para avaliar os filmes </h2>".ucfirst(strtolower($nome_do_usuario));
+    
+    echo "<h2> Bem vindo $nome_do_usuario a vontade para avanome_do_usuario fliar os filmes </h2>".ucfirst(strtolower($nome_do_usuario));
 
-    if(isset( $_SESSION['msg'])){
-
-        echo " $_SESSION['msg'] <br>";
-        unset( $_SESSION['msg']);
-
+//verefica se a mensagem de erro apareceu e depois termina a sesseion msg
+    if (isset($_SESSION['msg'])) {
+        echo "<p>" . $_SESSION['msg'] . "</p>";
+        unset($_SESSION['msg']);
     }
+
     ?>
+    <div class="nomeFilme"> 
+    <form action=""GET><!-- pegar o nome do filme adicionado pelo admin e mostra aqui -->
+
+
+
+
+    </form>
+
+
+    </div>
     <!-- formulário da avaliação -->
     <div class="avaliacao_filme">
-   
-        <form  method= "POST" action="processaMembro.php/" enctype="multipart/form-data"> 
+        <form  method= "POST" action="sistema/processaMembro.php/" enctype="multipart/form-data"> 
             <div class="estrelas"> 
                 <input type="radio" id="vazio" name="estrela" value ="" checked>
 
@@ -48,7 +60,6 @@
 
          <!-- envia para o banco de dados as informações da avaliação do filme contendo os valores 1,2,3,4 e 5 -->
                 <input type="submit" value="Enviar">
-
             </div>
         </form>
     </div>
