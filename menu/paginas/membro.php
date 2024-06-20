@@ -12,6 +12,7 @@
 <body>
 
     <h1> Avalie os filmes </h1>
+    
 
     <?php 
         session_start();
@@ -22,7 +23,7 @@
             echo "erro";
         }
         
-        echo "<h2> Bem vindo " . $nome_do_usuario . " fique a vontade para avaliar nossa lista de filmes </h2>";
+        echo "<h2> Bem vindo " .$nome_do_usuario . " fique a vontade para avaliar nossa lista de filmes </>";
 
         //verefica se a mensagem de erro apareceu e depois termina a sesseion msg
         if (isset($_SESSION['msg'])) {
@@ -46,7 +47,7 @@
                 echo '<th> NOME </th>';
                 echo '<th> CATEGORIA </th>';
                 echo '<th> DIRETOR </th>';
-                echo '<th> DETALHES E AVALIAÇÕES </th>';
+                echo '<th> DETALHES E AVALIAÇÕES</th>';
             echo '</tr>';
 
             while($row = mysqli_fetch_array($resultado)) {
@@ -55,7 +56,7 @@
                 echo '<td>' .  $row["nome"] .  '</td>';
                 echo '<td>' .  $row["categoria"] .  '</td>';
                 echo '<td>' .  $row["diretor"] .  '</td>';
-                echo '<td> <a href="avaliacao.php?id=' . $row["id"] . '"> Ver avaliaçoes! </td>';
+                echo '<td> <a href="avaliacao.php?id=' . $row["id"] . '"> Ver Avaliações </td>';
                 echo '</tr>';
             }
 
@@ -66,9 +67,9 @@
     
         <div class="sair">
             <a href="sair.php" >
-                <h1 style="font-size: 20px;">
+                <p style="font-size: 20px;">
                     SAIR
-                </h1>
+                </p>
             </a>
         </div>
     

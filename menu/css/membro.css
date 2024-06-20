@@ -1,49 +1,73 @@
+body{
+  background-image: linear-gradient(to right, rgb(12, 145, 0) , rgb(0, 0, 0));
+}
+
 table {
-    margin-top: 50px;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    background-color: #000; /* Fundo preto para a tabela */
-    color:  #4CAF50; /* Texto salmão para toda a tabela */
-  }
+  margin-top: 50px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #000000e1; /* Fundo preto para a tabela */
+  color:  #4CAF50; /* Texto salmão para toda a tabela */
+}
   body{
     background-image: linear-gradient(to right, rgb(12, 145, 0) , rgb(0, 0, 0));
   }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
 
-  }
-  a {
-    display: inline-block;
-    padding: 3px 5px;
-    background-color: #4CAF50; /* Verde musgo para o fundo dos links */
-    color: #fff; /* Texto branco para os links */
-    text-decoration: none;
-    border-radius: 3px;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+
+}
+a {
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: #4CAF50; /* Verde musgo para o fundo dos links */
+  color: #fff; /* Texto branco para os links */
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+a:hover{
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: #b6a400; /* Verde musgo para o fundo dos links */
+  color: #000000c0; /* Texto branco para os links */
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+h2{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+} 
+
+h1{
+  font-size: 300%;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255);
 }
 
 
 
 
-
-  
 .estrelas input[type=radio]{
-    display: none;
+  display: none;
 }
 .estrelas label i.fa:before{
-    content: '\f005';
-    color: #FC0;
+  content: '\f005';
+  color: #FC0;
 }
 .estrelas input[type=radio]:checked ~ label i.fa:before{
 
-    color: #CCC;
+  color: #CCC;
 
 }

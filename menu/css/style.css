@@ -6,7 +6,7 @@ body{
 
 
 h1{
-    text-shadow: 1px 1px 5px rgb(238, 255, 0);
+    text-shadow: 1px 1px 5px rgb(238, 255, 0);   
     font-size: 300% ;
     color: antiquewhite;
     text-align: center;
@@ -31,7 +31,7 @@ input{
 }
 
 .botao{
-
+    
     background-color : rgba(121, 228, 0, 0.63);
     border: none;
     padding: 15px;
