@@ -11,6 +11,7 @@
         while($row = mysqli_fetch_array($resultado)) {
 
             if($row['nome'] != null){
+                $_SESSION["id_usuario"] = $row['id'];
                 $_SESSION["usuario"] = $row['user_login'];
                 $_SESSION["senha"] = $row['senha'];
                 $_SESSION["nome"] = $row['nome'];

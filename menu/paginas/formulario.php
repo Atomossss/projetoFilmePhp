@@ -13,7 +13,7 @@
 
                 <input type = "text" placeholder ="Nome de Usuário" name = "usuario" id="">
                 <br><br>
-                <input type = "text" placeholder ="Senha" name = "senha" id = "">
+                <input type = "password" placeholder ="Senha" name = "senha" id = "">
                 <br><br>
                 <input class="botao" type = "submit" value = "Entrar">
             <!-- Depois arrumar o espaçamento com css-->

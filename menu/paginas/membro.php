@@ -22,54 +22,48 @@
             echo "erro";
         }
         
-
-
-        
-        echo "<h2> Bem vindo " . $nome_do_usuario . " a vontade para avaliar os filmes </h2>";
+        echo "<h2> Bem vindo " . $nome_do_usuario . " fique a vontade para avaliar nossa lista de filmes </h2>";
 
         //verefica se a mensagem de erro apareceu e depois termina a sesseion msg
         if (isset($_SESSION['msg'])) {
+
             echo "<p>" . $_SESSION['msg'] . "</p>";
             unset($_SESSION['msg']);
         }
 
     ?>
     <div class="nomeFilme"> 
-    <form action=""GET><!-- pegar o nome do filme adicionado pelo admin e mostra aqui -->
 
+        <?php 
+            include_once("../sistema/bd.php");
+                
+            $sql = "SELECT * FROM filmes";
+            $resultado = mysqli_query($strcon,$sql) or die("Erro ao retornar dados");
+                
+            echo '<table>';
 
+            echo '<tr>';
+                echo '<th> NOME </th>';
+                echo '<th> CATEGORIA </th>';
+                echo '<th> DIRETOR </th>';
+                echo '<th> DETALHES </th>';
+            echo '</tr>';
 
+            while($row = mysqli_fetch_array($resultado)) {
 
-    </form>
+                echo '<tr>';
+                echo '<td>' .  $row["nome"] .  '</td>';
+                echo '<td>' .  $row["categoria"] .  '</td>';
+                echo '<td>' .  $row["diretor"] .  '</td>';
+                echo '<td> <a href="avaliacao.php?id=' . $row["id"] . '"> Avaliação </td>';
+                echo '</tr>';
+            }
 
+            echo '</table>'; 
+        ?>
 
     </div>
-    <!-- formulário da avaliação -->
-    <div class="avaliacao_filme">
-        <form  method= "POST" action="sistema/processaMembro.php/" enctype="multipart/form-data"> 
-            <div class="estrelas"> 
-                <input type="radio" id="vazio" name="estrela" value ="" checked>
-
-                <label for="estrela_um"> <i class="fa"> </i></label>
-                <input type="radio" id="estrela_um" name="estrela" value ="1">
-
-                <label for="estrela_dois"> <i class="fa"> </i></label>
-                <input type="radio" id="estrela_dois" name="estrela" value ="2">
-
-                <label for="estrela_tres"> <i class="fa"> </i></label>
-                <input type="radio" id="estrela_tres" name="estrela" value ="3">
-
-                <label for="estrela_quatro"> <i class="fa"> </i></label>
-                <input type="radio" id="estrela_quatro" name="estrela" value ="4">
-
-                <label for="estrela_cinco"> <i class="fa"> </i></label>
-                <input type="radio" id="estrela_cinco" name="estrela" value ="5"> <br><br>
-
-         <!-- envia para o banco de dados as informações da avaliação do filme contendo os valores 1,2,3,4 e 5 -->
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-    </div>
+    
         <div>
             <a href="sair.php" >
                 <h1>
