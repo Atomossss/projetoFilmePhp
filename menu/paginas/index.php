@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
     <title>Home</title>
 </head>
 
 <body>
 
-<?php //
+<?php
 //Talvez colocar type password na senha  
-//Início da sessão do susuário
+//Início da sessão do usuário
     session_start();
     
     require_once "../sistema/usuarios.php";
@@ -22,7 +22,7 @@
     
     if(!is_null($usuarioSessao)){
 
-       // echo" FUNCIONOU AEEEEE";
+        echo" FUNCIONOU AEEEEE";
         $nome = $_SESSION["nome"] ?? null;
         $permissao = $_SESSION["permissao"] ?? null;
         if(!is_null($nome)){
@@ -51,7 +51,7 @@
                 header('Location: '.$_SERVER['REQUEST_URI']);
               
             }else{
-                echo "Senha inválida ";
+                echo "Senha inválida";
                     // fazer var dump
                 echo "Tentar Novamente";
 

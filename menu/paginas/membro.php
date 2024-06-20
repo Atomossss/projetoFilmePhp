@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/membro.css">
+    <link rel="stylesheet" href="../css/membro.css">
     
     <title>Página do Usuário</title>
 </head>
@@ -14,18 +14,24 @@
     <h1> Avalie os filmes </h1>
 
     <?php 
-    session_start();
-    
-    $nome_do_usuario=$_SESSION['nome'];
+        session_start();
 
-    
-    echo "<h2> Bem vindo " . $_SESSION['nome'] . "a vontade para avaliar os filmes </h2>";
+        if(!is_null($_SESSION['nome'])){
+            $nome_do_usuario = $_SESSION['nome'];
+        }else{
+            echo "erro";
+        }
+        
 
-//verefica se a mensagem de erro apareceu e depois termina a sesseion msg
-    if (isset($_SESSION['msg'])) {
-        echo "<p>" . $_SESSION['msg'] . "</p>";
-        unset($_SESSION['msg']);
-    }
+
+        
+        echo "<h2> Bem vindo " . $nome_do_usuario . " a vontade para avaliar os filmes </h2>";
+
+        //verefica se a mensagem de erro apareceu e depois termina a sesseion msg
+        if (isset($_SESSION['msg'])) {
+            echo "<p>" . $_SESSION['msg'] . "</p>";
+            unset($_SESSION['msg']);
+        }
 
     ?>
     <div class="nomeFilme"> 
@@ -64,7 +70,13 @@
             </div>
         </form>
     </div>
-
+        <div>
+            <a href="sair.php" >
+                <h1>
+                    SAIR
+                </h1>
+            </a>
+        </div>
     
 </body>
 </html>
