@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/membro.css">
+    
     <title>Avaliação</title>
 </head>
 <body>
 
+        <a href="membro.php"> Voltar </a>
+
+        
         <?php 
             include_once("../sistema/bd.php");
 
@@ -82,7 +86,7 @@
             
             while($row = mysqli_fetch_array($resultado)) {
 
-                echo '<h1> Nome: ' . $row["nome"] .  '</h1>';
+                echo '<h1>' . $row["nome"] .  '</h1>';
                 echo '<h2> Nota: ' .  $row["nota"] .  '</h2>';
                 echo '<h2> Comentario: ' .  $row["comentario"] .  '</h2>';
                 echo '<br></br>';

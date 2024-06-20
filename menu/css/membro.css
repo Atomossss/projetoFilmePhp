@@ -3,17 +3,33 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    background-color: #000; /* Fundo preto para a tabela */
+    color:  #4CAF50; /* Texto salmão para toda a tabela */
   }
   
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    border-bottom: 1px solid #ddd;
   }
   
   tr:nth-child(even) {
     background-color: #dddddd;
+
   }
+  a {
+    display: inline-block;
+    padding: 3px 5px;
+    background-color: #4CAF50; /* Verde musgo para o fundo dos links */
+    color: #fff; /* Texto branco para os links */
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+
+
+
 
   
 .estrelas input[type=radio]{

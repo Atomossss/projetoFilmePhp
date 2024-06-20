@@ -64,9 +64,9 @@
 
     </div>
     
-        <div>
+        <div class="sair">
             <a href="sair.php" >
-                <h1>
+                <h1 style="font-size: 20px;">
                     SAIR
                 </h1>
             </a>
