@@ -6,6 +6,9 @@ table {
     background-color: #000; /* Fundo preto para a tabela */
     color:  #4CAF50; /* Texto salmão para toda a tabela */
   }
+  body{
+    background-image: linear-gradient(to right, rgb(12, 145, 0) , rgb(0, 0, 0));
+  }
   
   td, th {
     border: 1px solid #dddddd;

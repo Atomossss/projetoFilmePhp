@@ -12,13 +12,13 @@
 
         <div>
             <a href="sair.php" >
-                <h1>
+                <h1 style="font-size: 20px;">
                     SAIR
                 </h1>
             </a>
         </div>
 
-    <h1> Criar Filmes </h1>
+    
 
     <?php 
         session_start();
@@ -31,84 +31,12 @@
         } 
     ?>
 
+    <h1> Selecione as opções </h1>
+
     <div >
-        <form  method= "POST" action="admin.php">
-            <div class="container-forms">
-                <label> Nome do filme </label>
-                <input type = "text" placeholder ="Nome do filme" name = "nome">
-
-                <label> Sinopse </label>
-                <input type = "text" placeholder ="Sinopse" name = "sinopse">
-
-                <label> Categoria </label>
-                <input type = "text" placeholder ="Categoria" name = "categoria">
-
-                <label> Diretor </label>
-                <input type = "text" placeholder ="Diretor" name = "diretor">
-
-                <input style="margin-top: 10px;" type="submit" value="Enviar">
-            </div>
-        </form>
+        <a href="admin-criacao.php" >Criar Filme</a>
+        <a href="admin-tabela.php" >Visualizar Filmes</a>
     </div>
        
-
-    <?php 
-
-        include_once("../sistema/bd.php");
-
-        $nome = $_POST["nome"] ?? null;
-        $sinopse =  $_POST["sinopse"] ?? null;
-        $categoria = $_POST["categoria"] ?? null;
-        $diretor =  $_POST["diretor"] ?? null;
-
-        if(!is_null($nome) && !is_null($sinopse) && !is_null($categoria) && !is_null($diretor)){
-            
-            $sqlPost = "INSERT INTO filmes (nome, sinopse, categoria, diretor) VALUES ('$nome', '$sinopse', '$categoria', '$diretor');";
-            $resultado = mysqli_query($strcon,$sqlPost) or die("Erro ao retornar dados");
-
-        }
-
-
-        $sql = "SELECT * FROM filmes";
-        $resultado = mysqli_query($strcon,$sql) or die("Erro ao retornar dados");
-
-
-        echo '<table>';
-
-        echo '<tr>';
-            echo '<th> NOME </th>';
-            echo '<th> SINOPSE </th>';
-            echo '<th> CATEGORIA </th>';
-            echo '<th> DIRETOR </th>';
-        echo '</tr>';
-
-        while($row = mysqli_fetch_array($resultado)) {
-
-            echo '<tr>';
-            echo '<td>' .  $row["nome"] .  '</td>';
-            echo '<td>' .  $row["sinopse"] .  '</td>';
-            echo '<td>' .  $row["categoria"] .  '</td>';
-            echo '<td>' .  $row["diretor"] .  '</td>';
-            echo '</tr>';
-        }
-
-        echo '</table>';
-
-        //If de permissao precisa ser feito [feito]
-        //Css e html das paginas do membro e adm[]
-        // filtros dos filmes opcional[] 
-        //teste de avaliacao []
-        //criacao de filmes[] 
-        //opcional edição de file   
-        //melhorar css geral opcional[]
-        //opcional logout[]
-        //Pensar em uma forma de ligar os filmes com a avaliação de estrelas obeservação(criar função de mandar formulario de avaliação parao usuário)
-        
-    
-        
-    ?>
-        
-    
-    
 </body>
 </html>

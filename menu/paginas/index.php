@@ -8,7 +8,10 @@
 </head>
 
 <body>
-
+ <h1> CRAZE FROG</h1>
+ <h2>Seu site confiavel de indicaçoes de filmes <br>
+    atualizados diaria mente com as melhoes dicas de filmes.<br>
+    acesse ja e deixe sua avaliação e comentarios</h2>
 <?php
 //Talvez colocar type password na senha  
 //Início da sessão do usuário

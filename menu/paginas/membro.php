@@ -46,7 +46,7 @@
                 echo '<th> NOME </th>';
                 echo '<th> CATEGORIA </th>';
                 echo '<th> DIRETOR </th>';
-                echo '<th> DETALHES </th>';
+                echo '<th> DETALHES E AVALIAÇÕES </th>';
             echo '</tr>';
 
             while($row = mysqli_fetch_array($resultado)) {
@@ -55,7 +55,7 @@
                 echo '<td>' .  $row["nome"] .  '</td>';
                 echo '<td>' .  $row["categoria"] .  '</td>';
                 echo '<td>' .  $row["diretor"] .  '</td>';
-                echo '<td> <a href="avaliacao.php?id=' . $row["id"] . '"> Avaliação </td>';
+                echo '<td> <a href="avaliacao.php?id=' . $row["id"] . '"> Ver avaliaçoes! </td>';
                 echo '</tr>';
             }
 
