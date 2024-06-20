@@ -22,7 +22,7 @@
     
     if(!is_null($usuarioSessao)){
 
-        echo" FUNCIONOU AEEEEE";
+       // echo" FUNCIONOU AEEEEE";
         $nome = $_SESSION["nome"] ?? null;
         $permissao = $_SESSION["permissao"] ?? null;
         if(!is_null($nome)){
@@ -40,7 +40,7 @@
 
         if(is_null($usuario) && is_null($senha)){
             echo " Fazer Login";
-            require_once "formulario.php";
+            include_once "formulario.php";
         }else{
 
             if(verificarUser($usuario, $senha)){
