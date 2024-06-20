@@ -15,10 +15,11 @@
 
     <?php 
     session_start();
-    $_SESSION['nome'] = $nome_do_usuario;
+    
+    $nome_do_usuario=$_SESSION['nome'];
 
     
-    echo "<h2> Bem vindo $nome_do_usuario a vontade para avanome_do_usuario fliar os filmes </h2>".ucfirst(strtolower($nome_do_usuario));
+    echo "<h2> Bem vindo " . $_SESSION['nome'] . "a vontade para avaliar os filmes </h2>";
 
 //verefica se a mensagem de erro apareceu e depois termina a sesseion msg
     if (isset($_SESSION['msg'])) {

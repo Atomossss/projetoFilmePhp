@@ -1,1 +1,2 @@
 # projetoFilmePhp
+# Existe uma pasta sql no qual tem toda estrutura do banco ultilizado no projeto, é so pegar o arquivo dessa pasta que esta em .sql, e importar no phpmyadmim, criando o nome do banco igual o nome imdbcrazyfrog. 

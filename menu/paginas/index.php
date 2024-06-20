@@ -14,7 +14,7 @@
 //Início da sessão do susuário
     session_start();
     
-    require_once "sistema/usuarios.php";
+    require_once "../sistema/usuarios.php";
     
 
     $usuarioSessao = $_SESSION["usuario"] ?? null;
@@ -36,6 +36,7 @@
             header("Location: membro.php");
         }
     }else{
+        include_once "formulario.php";
 
         $usuario = $_POST["usuario"] ?? null;
         $senha =  $_POST["senha"] ?? null;
