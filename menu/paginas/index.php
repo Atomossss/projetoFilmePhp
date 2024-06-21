@@ -19,9 +19,9 @@
     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1b82ba2b-aff7-44e6-9afe-a57a5c42014d/dhfqcv2-31d718d0-e8a5-495d-94e5-43913ea867e9.png/v1/fill/w_1280,h_1189/crazy_frog_render_by_kingevan210_dhfqcv2-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE4OSIsInBhdGgiOiJcL2ZcLzFiODJiYTJiLWFmZjctNDRlNi05YWZlLWE1N2E1YzQyMDE0ZFwvZGhmcWN2Mi0zMWQ3MThkMC1lOGE1LTQ5NWQtOTRlNS00MzkxM2VhODY3ZTkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Zrm7j9S8pGhizT2fZuGb8DqqQkV2Qo0c7JEUzck7k8k" alt="W3Schools.com" width=300px height=300px>
     </div>
 
-<div >          
+<div style="z-index:99999; position: relative;" >          
 
-    <a style="display: flex; justify-content: center;" href="login.php" >
+    <a style="display: flex; justify-content: center; " href="login.php " >
         <button style="font-size: 20px;">
             Fazer login
         </button>
