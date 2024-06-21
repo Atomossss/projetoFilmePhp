@@ -12,7 +12,7 @@
 
         <a href="membro.php"> Voltar </a>
 
-        
+
         <?php 
             include_once("../sistema/bd.php");
 
@@ -33,7 +33,7 @@
 
     <!-- formulário da avaliação -->
     <div class="avaliacao_filme">
-        <h3>Avaliação</h3>
+        <h3 text-align: center >Deixe aqui sua valiação </h3>
 
         <?php 
             echo '<form  method= "POST" action="avaliacao.php?id='.  $filme_id .'" enctype="multipart/form-data">';
