@@ -34,7 +34,7 @@ h3{
 }
 
 .login{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,6 +48,9 @@ input{
     
     border:none;
     outline: none;
+}
+.container{
+    color: #a10000;
 }
 
 .botao{
@@ -117,7 +120,7 @@ button:hover {
  
     display: inline-block;
     padding: 5px 10px;
-    background-color: rgb(0, 32, 0);
+    background-color: #000;
     color: #ffffff;
     text-decoration: none;
     border-radius: 3px;

@@ -8,7 +8,7 @@
     
     <title>Avaliação</title>
 </head>
-<body>
+<body >
 
         <a href="membro.php"> Voltar </a>
 
@@ -22,18 +22,18 @@
             $resultado = mysqli_query($strcon,$sql) or die("Erro ao retornar dados");
                 
             while($row = mysqli_fetch_array($resultado)) {
-
-                echo '<h1> Titulo: ' .  $row["nome"] .  '</h1>';
-                echo '<h2> Sinopse: ' .  $row["sinopse"] .  '</h2>';
-                echo '<h2> Categoria: ' .  $row["categoria"] .  '</h2>';
-                echo '<h2> Diretor: ' .  $row["diretor"] .  '</h2>';
+                
+                echo '<h1 class="container"> Titulo: ' .  $row["nome"] .  '</h1>';
+                echo '<h2 class="containerr"> Sinopse: ' .  $row["sinopse"] .  '</h2>';
+                echo '<h2 class="containerrr"> Categoria: ' .  $row["categoria"] .  '</h2>';
+                echo '<h2 class="containerrrr"> Diretor: ' .  $row["diretor"] .  '</h2>';
                 echo '<br></br>';
             }
         ?>
 
     <!-- formulário da avaliação -->
     <div class="avaliacao_filme">
-        <h3 text-align: center >Deixe aqui sua valiação </h3>
+        <h3 >Deixe aqui sua valiação </h3>
 
         <?php 
             echo '<form  method= "POST" action="avaliacao.php?id='.  $filme_id .'" enctype="multipart/form-data">';

@@ -4,10 +4,10 @@ table {
   border-collapse: collapse;
   width: 100%;
   background-color: #000; /* Fundo preto para a tabela */
-  color:  #4CAF50; /* Texto salmão para toda a tabela */
+  color:  #2da731; /* Texto salmão para toda a tabela */
 }
 body{
-  background-color: rgb(12, 145, 0) ;
+  background-color: rgb(6, 46, 3) ;
 }
 
 td, th {
@@ -60,10 +60,11 @@ a:hover {
   background-color: #45a049; /* Verde um pouco mais escuro no hover */
 }
 
-h1, h2 {
-  text-align: center;
+h1, h2, h3 {
+  text-align: justify;
   font-family: 'Times New Roman', Times, serif;
-  color: #333; /* Texto mais escuro para os títulos */
+  color: white; /* Texto mais escuro para os títulos */
+
 }
 
 
