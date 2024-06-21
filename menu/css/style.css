@@ -7,12 +7,17 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
     position: fixed;
     bottom: 0;
     width: 100%;
   }
-
+ 
+  .imagem{
+    margin-bottom: 25%;
+    position: absolute;
+    margin-left: 15%;
+}
 h1{
     text-shadow: 1px 1px 5px rgb(238, 255, 0);   
     font-size: 300% ;
@@ -86,22 +91,34 @@ td {
 
 /* Estilo para o link de Avaliação */
 td a {
+    text-shadow: 1px 1px 5px rgb(238, 255, 0);  
     display: inline-block;
     padding: 5px 10px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
+    background-color: #009dff;
+    color: #a10000;
     border-radius: 3px;
 }
 
 td a:hover {
     background-color: #2980b9;
+ 
 }
 button {
+ 
     display: inline-block;
     padding: 5px 10px;
-    background-color: rgb(0, 22, 1);
-    color: #fff;
+    background-color: rgb(0, 70, 0);
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgb(238, 255, 0);
+    border-radius: 3px;
+}
+
+button:hover {
+ 
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(0, 32, 0);
+    color: #ffffff;
     text-decoration: none;
     border-radius: 3px;
 }
