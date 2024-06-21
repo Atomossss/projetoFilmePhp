@@ -59,8 +59,19 @@
         }
 
     }
+    
 
 
 ?>
+     <a href="index.php" >
+        <button style="font-size: 20px;">
+            VOLTAR
+        </button>
+    </a>
+        <footer>
+            <div>&copy; 2024 Craze Frog Internacional O.o | Todos os direitos reservados</div>
+            <div>Contato: info@crazefrog.com | Telefone: +1234567890</div>
+            <div>Endereço: Rua dos Sapos Saltitantes, 123 - Cidade dos Anfíbios</div>
+        </footer>
 </body>
 </html>

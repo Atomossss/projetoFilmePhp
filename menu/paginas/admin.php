@@ -26,7 +26,7 @@
         if ($_SESSION['nome']){
 
             $nome_do_admin = $_SESSION['nome'];
-            echo "Bem vindo Administrador ".$nome_do_admin;
+            echo "<h1>Bem vindo Admim </h1>"."<h1>$nome_do_admin</h1>";
 
         } 
     ?>
@@ -37,6 +37,10 @@
         <a href="admin-criacao.php" >Criar Filme</a>
         <a href="admin-tabela.php" >Visualizar Filmes</a>
     </div>
-       
+        <footer>
+            <div>&copy; 2024 Craze Frog Internacional O.o | Todos os direitos reservados</div>
+            <div>Contato: info@crazefrog.com | Telefone: +1234567890</div>
+            <div>Endereço: Rua dos Sapos Saltitantes, 123 - Cidade dos Anfíbios</div>
+        </footer>
 </body>
 </html>

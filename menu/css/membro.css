@@ -1,29 +1,24 @@
-body{
-  background-image: linear-gradient(to right, rgb(12, 145, 0) , rgb(0, 0, 0));
-}
-
 table {
   margin-top: 50px;
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  background-color: #000000e1; /* Fundo preto para a tabela */
+  background-color: #000; /* Fundo preto para a tabela */
   color:  #4CAF50; /* Texto salmão para toda a tabela */
 }
-  body{
-    background-image: linear-gradient(to right, rgb(12, 145, 0) , rgb(0, 0, 0));
-  }
+body{
+  background-color: rgb(12, 145, 0) ;
+}
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  border-bottom: 1px solid #ddd;
+  color:  #4CAF50; /* Texto salmão para toda a tabela */
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
-
 }
 a {
   display: inline-block;
@@ -33,29 +28,43 @@ a {
   text-decoration: none;
   border-radius: 3px;
 }
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
 
-a:hover{
+.container-forms {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+
+a {
   display: inline-block;
-  padding: 3px 5px;
-  background-color: #b6a400; /* Verde musgo para o fundo dos links */
-  color: #000000c0; /* Texto branco para os links */
+  padding: 5px 10px;
+  background-color: #4CAF50; /* Verde mais suave para o fundo dos links */
+  color: #fff; /* Texto branco para os links */
   text-decoration: none;
   border-radius: 3px;
 }
 
-h2{
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
-} 
-
-h1{
-  font-size: 300%;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(255, 255, 255);
+a:hover {
+  background-color: #45a049; /* Verde um pouco mais escuro no hover */
 }
 
+h1, h2 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: #333; /* Texto mais escuro para os títulos */
+}
 
 
 
