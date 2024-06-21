@@ -21,13 +21,21 @@
 
 <div >          
 
-    <a href="login.php" >
+    <a style="display: flex; justify-content: center;" href="login.php" >
         <button style="font-size: 20px;">
             Fazer login
         </button>
     </a>
 
 </div>
+    <div class="crazy-div">
+        <h2 style="z-index: 9999;">DÁ UM PLAY AQUI!</h2>
+        <audio style="margin-top: 190px;" controls autoplay>
+            <source src="../musicafrog/Crazy Frog - Axel F (Official Video).mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+    
 
         <footer>
             <div>&copy; 2024 Craze Frog Internacional O.o | Todos os direitos reservados</div>
