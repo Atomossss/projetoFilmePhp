@@ -15,7 +15,7 @@ if(!empty($_POST['estrela'])) {
 
 } else {//caso não tenha nada, rediriciona o usuário para membro.php, mostrando uma mensagem
     $_SESSION['msg'] = "Erro, necessário selecionar pelo menos uma estrela!";
-    header("Location: paginas/membro.php");
+    header("Location: homePage/membro.php");
 }
 
 

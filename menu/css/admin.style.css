@@ -1,3 +1,7 @@
+body{
+  background-color: rgb(6, 46, 3) ;
+}
+
 table {
     margin-top: 50px;
     font-family: arial, sans-serif;
@@ -5,9 +9,6 @@ table {
     width: 100%;
     background-color: #000; /* Fundo preto para a tabela */
     color:  #4CAF50; /* Texto salmão para toda a tabela */
-  }
-  body{
-    background-image: linear-gradient(to right, rgb(12, 145, 0) , rgb(0, 0, 0));
   }
   
   td, th {
@@ -24,7 +25,7 @@ table {
     display: inline-block;
     padding: 3px 5px;
     background-color: #4CAF50; /* Verde musgo para o fundo dos links */
-    color: #fff; /* Texto branco para os links */
+    color: black; /* Texto branco para os links */
     text-decoration: none;
     border-radius: 3px;
 }
